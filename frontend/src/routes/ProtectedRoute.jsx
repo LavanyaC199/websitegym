@@ -1,0 +1,52 @@
+// import { Navigate, Outlet } from "react-router-dom";
+
+// export default function ProtectedRoute({ role }) {
+//   const token = localStorage.getItem("token");
+//   const userRole = localStorage.getItem("role");
+
+//   // Not logged in
+//   if (!token) {
+//     return <Navigate to="/login" replace />;
+//   }
+
+//   // Role mismatch
+//   if (role && userRole !== role) {
+//     return <Navigate to="/login" replace />;
+//   }
+
+//   // Authorized
+//   return <Outlet />;
+// }
+
+
+
+// import { Navigate, Outlet } from "react-router-dom";
+
+// export default function ProtectedRoute({ role }) {
+//   const token = localStorage.getItem("token");
+//   const userRole = localStorage.getItem("role");
+
+//   if (!token) return <Navigate to="/login" />;
+
+//   if (role && userRole !== role) return <Navigate to="/login" />;
+
+//   return <Outlet />;
+// }
+
+
+import { Navigate, Outlet } from "react-router-dom";
+
+export default function ProtectedRoute({ role }) {
+  const token = localStorage.getItem("token");
+  const userRole = localStorage.getItem("role");
+
+  if (!token) {
+    return <Navigate to="/login" />;
+  }
+
+  if (role && userRole !== role) {
+    return <Navigate to="/login" />;
+  }
+
+  return <Outlet />;
+}

@@ -1,0 +1,29 @@
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  background: white;
+  color: black;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.auth-box h2 {
+  text-align: center;
+}
+
+.auth-box button {
+  background: #203a43;
+  color: white;
+}
+
+.auth-box p {
+  text-align: center;
+  cursor: pointer;
+  color: blue;
+}
